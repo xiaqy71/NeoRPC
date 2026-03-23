@@ -1,0 +1,17 @@
+#ifdef COMMAND_INCLUDE_SECTION
+#include "commands/AddCommand.hpp"
+#include "commands/PingCommand.hpp"
+#include "commands/EchoCommand.hpp"
+#include "commands/SubCommand.hpp"
+#include "commands/StatsCommand.hpp"
+#include "commands/TimeCommand.hpp"
+#endif
+
+#ifdef COMMAND_ENTRY
+COMMAND_ENTRY(add, AddCommand)
+COMMAND_ENTRY(ping, PingCommand)
+COMMAND_ENTRY(echo, EchoCommand)
+COMMAND_ENTRY(sub, SubCommand)
+COMMAND_ENTRY(stats, StatsCommand)
+COMMAND_ENTRY(time, TimeCommand)
+#endif
