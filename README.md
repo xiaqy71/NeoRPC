@@ -1,10 +1,10 @@
 # NeoRPC
 
-一个基于 C++20 协程与 `epoll` 的轻量级异步 RPC / 命令服务器原型。
+一个基于 C++20 协程与 `epoll` 的轻量级异步命令服务器，并预留了向 RPC 原型演进的扩展能力。
 
 ## 👀 TL;DR
 
-- 基于 `C++20 Coroutine + epoll` 实现单线程 Reactor 异步网络服务，支持非阻塞 IO、按行协议拆包与命令分发
+- 基于 `C++20 Coroutine + epoll` 实现单线程 Reactor 异步命令服务器，支持非阻塞 IO、按行协议拆包与命令分发
 - 使用 `X-Macro` 构建命令注册机制，引入 `CommandContext` 与 `ServiceRegistry` 支持服务扩展
 - 提供压测脚本与图表输出能力；在本机回环、`messages=200`、`size=128` 条件下，不同并发配置下吞吐约 `1.2w ~ 2.1w msg/s`
 
@@ -14,7 +14,7 @@
 
 ## ✨ 项目简介
 
-NeoRPC 采用单线程 Reactor 模型，围绕非阻塞 IO、按行协议拆包、命令分发与服务上下文传递，实现了一个轻量级异步 RPC / 命令服务器。
+NeoRPC 采用单线程 Reactor 模型，围绕非阻塞 IO、按行协议拆包、命令分发与服务上下文传递，实现了一个轻量级异步命令服务器；同时通过 `CommandContext` 和 `ServiceRegistry` 为后续向更完整的 RPC 原型扩展预留了接口。
 
 当前项目重点覆盖：
 
