@@ -19,9 +19,7 @@ compile_commands.json
 
 # Benchmark outputs
 /bench.csv
-/throughput_by_mode.png
-/latency_echo.png
-/latency_ping.png
+
 
 # Python cache
 __pycache__/
